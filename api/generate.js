@@ -33,7 +33,7 @@ Servings:
 Ingredients list: ${ingredients.trim()}`;
 
   try {
-    const model = "gemini-1.5-flash";
+    const model = process.env.GEMINI_MODEL || "gemini-flash-latest";
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
       {
