@@ -51,7 +51,7 @@ Ingredients list: ${ingredients.trim()}`;
           ],
           generationConfig: {
             temperature: 0.7,
-            maxOutputTokens: 700,
+            maxOutputTokens: 1500,
           },
         }),
       }
