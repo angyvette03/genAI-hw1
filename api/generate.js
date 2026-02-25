@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   const prompt = `You are a helpful cooking assistant. Create a short recipe using the provided ingredients.
 
 Requirements:
-- Use the ingredients provided. You may add common pantry staples (salt, pepper, oil, butter, herbs).
+- Use exactly two ingredients from the provided list. You may add common pantry staples (salt, pepper, oil, butter, herbs).
 - Diet restriction: ${diet || "none"}.
 - Servings: ${servings || "2"}.
 - Max total time: ${timeLimit || "30"} minutes.
@@ -51,7 +51,7 @@ Ingredients list: ${ingredients.trim()}`;
           ],
           generationConfig: {
             temperature: 0.7,
-            maxOutputTokens: 512,
+            maxOutputTokens: 700,
           },
         }),
       }
